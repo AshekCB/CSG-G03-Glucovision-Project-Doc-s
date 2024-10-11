@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        /* Header Styling */
+        header {
+            background-color: #1a73e8;
+            color: white;
+            padding: 2px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        /* Navigation Bar Styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0059b3;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.3em;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        /* Main Content Styling */
+        main {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin: 30px auto;
+            max-width: 900px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        main h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #1a73e8;
+        }
+        main p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+        /* Footer Styling */
+        footer {
+            background-color: #1a73e8;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>GLUCO-VISION </h1>
+	<h4>-- The Dia Predictor</h4>
+    </header>
+
+    <nav>
+        <a href="{{url_for('home')}}">Home</a>
+	<a href="{{url_for('about')}}">About</a>
+        <a href="{{url_for('bmi')}}">BMI Calculator</a>
+        <a href="{{url_for('predictions')}}">Prediction Page</a>
+        <a href="{{url_for('age')}}">Age Calculator</a>
+        <a href="{{url_for('appointments')}}">Dr Appointment Booking</a>
+	<a href="{{url_for('guard')}}">Dia Guard</a>
+    
+        
+    </nav>
+
+    <main>
+        <h2>Welcome to GLUCO-VISION</h2>
+        <p>Your reliable assistant for predicting diabetes and taking care of your health!</p>
+        <p>
+            <strong>GlucoVision</strong> refers to the ability to foresee or monitor glucose levels, with an emphasis on predicting or managing blood sugar levels for individuals at risk of or living with diabetes.<br>
+            <br>
+           <strong> "Gluco"</strong> relates to glucose, the sugar found in blood, which is a critical factor in diabetes management.<br>
+            <strong>"Vision"</strong> symbolizes insight or predictive capability, suggesting that the system helps users gain foresight into their blood sugar levels and potential risks related to diabetes.<br>
+            <br>
+<strong>GlucoVision</strong> is a system or tool designed to help users stay informed and proactive about their health by predicting the likelihood of diabetes, enabling early intervention and better management strategies.
+<br>
+
+</p>
+<h1>Scope : </h1>
+<p>
+    In India, an estimated 77 million adults over the age of 18 are living with type 2 diabetes, 
+    while nearly 25 million are considered prediabetic, putting them at an increased risk of developing diabetes
+     in the near future. 
+    Alarmingly, more than half of those affected are unaware of their diabetic status, 
+    which can lead to severe health complications if not detected and treated early.
+<br>
+    Adults with diabetes face a two- to three-fold higher risk of heart attacks and strokes. 
+    Complications such as reduced blood flow and neuropathy (nerve damage) in the feet can increase 
+    the risk of foot ulcers, infections, and in extreme cases, may even result in the need for limb amputation. 
+    Diabetic retinopathy, a leading cause of blindness, arises from long-term damage to the small blood vessels in the retina. 
+    Moreover, diabetes is one of the primary contributors to kidney failure.
+    <br>
+    Our project, <strong>GlucoVision</strong>, aims to empower individuals by offering early insights into their
+     potential risk of developing diabetes through advanced machine learning models. 
+     By raising awareness and helping users track key health indicators, 
+     GlucoVision seeks to reduce the number of undiagnosed cases and promote proactive management of diabetes and its associated complications. With features like personalized health recommendations, preventive tips, and real-time risk assessments, 
+    our platform helps users take control of their health,
+     reducing the burden of diabetes-related complications in the long term.</p>
+
+    <p><br>
+        References:
+World Health Organization (WHO). (n.d.). Mobile Technology for Preventing NCDs. 
+Retrieved from <a href="https://www.who.int/india/health-topics/mobile-technology-for-preventing-ncds">https://www.who.int/india/health-topics/mobile-technology-for-preventing-ncds</a>
+    </p>
+</main>
+
+    <footer>
+        <p>&copy; 2025 GLUCO-VISION of Batch 2025 Passouts. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About GlucoVision – The Dia Predictor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1a73e8;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0059b3;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.3em;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        h2 {
+            color: #1a73e8;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        footer {
+            text-align: center;
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>About Gluco-Vision </h1>
+        <h4>–- The Dia Predictor</h4>
+    </header>
+    <nav>
+        <a href="{{url_for('home')}}">Home</a>
+	<a href="{{url_for('about')}}">About</a>
+        <a href="{{url_for('bmi')}}">BMI Calculator</a>
+        <a href="{{url_for('predictions')}}">Prediction Page</a>
+        <a href="{{url_for('age')}}">Age Calculator</a>
+        <a href="{{url_for('appointments')}}">Dr Appointment Booking</a>
+	<a href="{{url_for('guard')}}">Dia Guard</a>
+        
+    </nav>
+
+    <main>
+        <h2>Empowering Individuals with Early Insights</h2>
+        <p><strong>GlucoVision</strong> is an intelligent diabetes prediction system designed to empower individuals by providing early insights into their likelihood of developing diabetes. By analyzing key health parameters, the system predicts potential risks, enabling users to take proactive steps towards better health management.</p>
+
+        <p>Our predictive model is based on scientifically backed parameters that are crucial indicators of diabetes risk. These include:</p>
+
+        <ul>
+            <li><strong>Number of Pregnancies</strong>: This parameter helps assess the history of pregnancies, which can impact insulin sensitivity, especially in gestational diabetes.</li><br>
+            <li><strong>Glucose Level</strong>: Elevated glucose levels are a primary indicator of diabetes. The system uses fasting glucose levels to assess your body's ability to regulate sugar.</li><br>
+            <li><strong>Blood Pressure</strong>: High blood pressure is a known risk factor for diabetes. Maintaining healthy blood pressure is essential in reducing diabetes complications.</li><br>
+            <li><strong>Skin Thickness</strong>: This measurement, often taken on the triceps, can indicate insulin resistance, especially when combined with other markers like BMI.</li><br>
+            <li><strong>Insulin Level</strong>: Abnormal insulin levels can be a sign of prediabetes or diabetes, helping gauge the efficiency of the pancreas in regulating blood sugar.</li><br>
+            <li><strong>Body Mass Index (BMI)</strong>: BMI is a critical factor in diabetes prediction, as excess body fat, particularly around the abdomen, can lead to insulin resistance.<a href="{{url_for('bmi')}}">Check Your BMI Here ! ...</a></li><br>
+            <li><strong>Diabetes Pedigree Function</strong>: This parameter considers your family history and the genetic predisposition to diabetes. A higher pedigree score indicates a stronger hereditary influence on diabetes risk.</li><br>
+            <li><strong>Age</strong>: As age increases, the risk of developing diabetes also rises. The system accounts for age as a significant factor in determining potential risk.<a href="{{url_for('age')}}">Check Your Age Here ! ...</a></li><br>
+            <li><strong>Outcome</strong>: Finally, based on these parameters, the system predicts whether an individual is at risk of developing diabetes. This outcome helps guide preventive measures or further medical consultation.</li>
+        </ul>
+
+        <p><strong>GlucoVision</strong> brings together these factors in a user-friendly platform to deliver actionable insights, ensuring that users are informed and equipped to make health-conscious decisions.</p>
+
+        <p>By keeping you informed of your risks, <strong>GlucoVision</strong> helps you take control of your health, empowering you to live a life free from the complications associated with diabetes.</p>
+    </main>
+
+    <footer>
+<center>        &copy; 2025 GLUCO-VISION of Batch 2025 Passouts. All Rights Reserved.</center>
+    </footer>
+
+</body>
+</html>

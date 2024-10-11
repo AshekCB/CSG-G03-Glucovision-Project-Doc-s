@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator – GlucoVision</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1a73e8;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0059b3;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.3em;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        h2 {
+            color: #1a73e8;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .bmi-form {
+            margin: 20px 0;
+        }
+        .bmi-form label {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .bmi-form input {
+            padding: 10px;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .bmi-form button {
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .bmi-result {
+            margin-top: 20px;
+            font-size: 1.3em;
+            color: #1a73e8;
+        }
+        footer {
+            text-align: center;
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BMI Calculator</h1>
+        <h4>Gluco-Vision</h4>
+    </header>
+
+    <nav>
+        <nav>
+            <a href="{{url_for('home')}}">Home</a>
+	    <a href="{{url_for('about')}}">About</a>
+        <a href="{{url_for('bmi')}}">BMI Calculator</a>
+        <a href="{{url_for('predictions')}}">Prediction Page</a>
+        <a href="{{url_for('age')}}">Age Calculator</a>
+        <a href="{{url_for('appointments')}}">Dr Appointment Booking</a>
+	    <a href="{{url_for('guard')}}">Dia Guard</a>
+            
+        </nav>
+    
+        
+    </nav>
+
+    <main>
+        <h2>Calculate Your Body Mass Index (BMI)</h2>
+        <p>Use this BMI calculator to determine your Body Mass Index. It will help you understand whether you're in a healthy weight range, underweight, overweight, or obese. Keeping track of your BMI can help you maintain good health and reduce the risk of diabetes.</p>
+
+        <form class="bmi-form" method="POST" action="{{url_for('bmi')}}">
+            <label for="height">Enter your height in centimeters:</label>
+            <input type="number" id="height" name="height" placeholder="Height in cm" required>
+
+            <label for="weight">Enter your weight in kilograms:</label>
+            <input type="number" id="weight" name="weight" placeholder="Weight in kg" required>
+
+            <button type="submit">Calculate BMI</button>
+        </form>
+
+        <div class="bmi-result" id="bmiResult">
+            {% if result %}
+                {% if result < 18.5 %}
+                    <p>Your BMI is {{ result }}.😔 You are underweight.</p>
+                {% elif result >= 18.5 and result <= 24.9 %}
+                    <p>Your BMI is {{ result }}. 😊 You are in the healthy weight range.</p>
+                {% elif result >= 25 and result <= 29.9 %}
+                    <p>Your BMI is {{ result }}.🥲 You are overweight.</p>
+                {% else %}
+                    <p>Your BMI is {{ result }}.😔 You are obese.</p>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <p><strong>Note:</strong> A BMI between 18.5 and 24.9 is considered healthy. However, BMI is just one of the indicators, and consulting a healthcare provider for a comprehensive health assessment is recommended.</p>
+    </main>
+
+    <footer>
+        &copy; 2025 GLUCO-VISION of Batch 2025 Passouts. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Appointment – GlucoVision</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1a73e8;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #1a73e8;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+                
+        footer {
+            text-align: center;
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>View Prediction Details</h1>
+        <h4>Gluco-Vision</h4>
+    </header>
+
+    <main>
+        {%if result==1%}
+        <p>Based on the model's prediction,😔 It appears that you may have a condition consistent with diabetes.
+        We recommend consulting with a healthcare provider for further assessment and appropriate medical advice.
+    
+        <a href="{{url_for('appointments')}}">You Can Book an Appointment here.....</a><br>
+        You can check some the <a href="{{url_for('guard')}}">Health ❤️‍🩹🧑🏻‍⚕️Tricks ...</a>Regrading to Diabetes.
+    </p>
+    {%elif result==0%}
+    <p>
+        Based on the model's prediction,😊 It appears that you are not likely to have diabetes at this time. However,
+        maintaining regular health check-ups and a healthy lifestyle is still recommended.
+
+        You can check some the <a href="{{url_for('guard')}}">Health ❤️‍🩹🧑🏻‍⚕️Tricks ...</a>Regrading to Diabetes.
+    </p>
+    {%endif%}
+        
+        <h3>Thanks For Using Gluco-Vision....</h3>
+        <a href="{{url_for('home')}}">You can stay with us</a>
+        
+        
+    </main>
+
+    <footer>
+        &copy; 2025 GLUCO-VISION of Batch 2025 Passouts. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
